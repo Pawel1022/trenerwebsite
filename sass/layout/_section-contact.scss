@@ -1,0 +1,27 @@
+// section contact
+.social-item {
+	margin: 0 auto;
+}
+
+.social-link:link,
+.social-link:visited {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 500;
+	color: $color-primary;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.social-link:hover,
+.social-link:active {
+	color: $color-primary-darker;
+}
+
+.social-icon {
+	font-size: 3rem;
+	margin-bottom: 1.6rem;
+}

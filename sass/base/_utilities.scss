@@ -1,0 +1,82 @@
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 3.2rem;
+}
+
+.grid {
+	display: grid;
+	row-gap: 9.6rem;
+	column-gap: 6.4rem;
+}
+.grid--bigger-row-gap {
+	row-gap: 16.6rem;
+}
+
+.grid--small {
+	column-gap: 4.8rem;
+}
+
+.grid:not(:last-child) {
+	margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-h {
+	align-items: center;
+}
+
+.grid--center-v {
+	justify-content: center;
+}
+
+@media (max-width: $size-md) {
+	.grid--2-cols {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.grid--4-cols {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: $size-sm) {
+	.grid--4-cols {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: $size-lg) {
+	.grid {
+		column-gap: 4.8rem;
+		row-gap: 6.4rem;
+	}
+}
+
+// helpers
+
+.margin-right-sm {
+	margin-right: 1.6rem;
+}
+
+@media (max-width: $size-slg) {
+	.margin-right-sm {
+		margin-right: 0rem;
+		margin-bottom: 1.2rem;
+	}
+}

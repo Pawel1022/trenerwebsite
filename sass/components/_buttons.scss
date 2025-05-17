@@ -1,0 +1,36 @@
+// Buttons
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 1.6rem 3.2rem;
+	border-radius: 9px;
+	transition: all 0.3s;
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn--full:link,
+.btn--full:visited {
+	background-color: $color-primary;
+	color: $color-light-white;
+}
+
+.btn--full:hover,
+.btn--full:active {
+	background-color: $color-primary;
+	color: $text-color-dark;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+	border: 1px solid $color-primary;
+	color: $color-primary;
+}
+.btn--outline:hover,
+.btn--outline:active {
+	color: $text-color-dark;
+	background-color: $color-light-white;
+}

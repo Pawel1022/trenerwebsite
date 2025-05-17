@@ -1,0 +1,30 @@
+// Header
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color-primary-white;
+	padding: 0 4.8rem;
+	height: 9.6rem;
+	padding: 0 4.8rem;
+	position: relative;
+}
+
+.sticky .header {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 8rem;
+	padding-top: 0;
+	padding-bottom: 0;
+	z-index: 1000;
+	box-shadow: 0 1.2rem 3.2rem $shadow-color-dark;
+}
+
+@media (max-width: $size-lg) {
+	.header {
+		padding: 0 3.2rem;
+	}
+}

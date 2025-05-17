@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	line-height: 1;
+	font-weight: 400;
+	font-family: 'Oswald', serif;
+	overflow-x: hidden;
+	position: relative;
+}
+
+@media (max-width: $size-lg) {
+	html {
+		font-size: 56.52%;
+	}
+}
+
+@media (max-width: $size-slg) {
+	html {
+		font-size: 50%;
+	}
+}
+
+
+@media (max-width: $size-xs){
+	html{
+		font-size: 45%;
+	}
+}

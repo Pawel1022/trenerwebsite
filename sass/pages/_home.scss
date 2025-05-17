@@ -1,0 +1,26 @@
+// Sections padding itd
+
+.section-about-me {
+	padding: 9.6rem 0;
+}
+
+.section-offers {
+	padding: 9.6rem 0;
+}
+.section-training {
+	padding: 9.6rem 0;
+}
+
+.section-clients {
+	padding: 9.6rem 0;
+}
+
+.section-contact {
+	padding: 9.6rem 0;
+}
+
+@media (max-width: $size-xs) {
+	.section-contact {
+		padding: 4.8rem 0;
+	}
+}

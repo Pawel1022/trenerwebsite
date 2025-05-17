@@ -1,0 +1,34 @@
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateX(300%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@media (max-width: $size-sm) {
+	.animated {
+		animation: slide-in 0.3s forwards;
+	}
+}
+@media (max-width: $size-sm) {
+	.main-nav-link {
+		transform: translate(300%);
+	}
+}
+
+// Fade-in animation
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

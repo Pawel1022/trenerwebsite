@@ -1,0 +1,28 @@
+.story-tell-text {
+	display: flex;
+	flex-direction: column;
+}
+.story-tell-photo {
+	max-width: 60%;
+	object-fit: cover;
+	margin: 0 auto;
+	display: block;
+	border-radius: 5px;
+	filter: brightness(0.85);
+}
+.story-tell-desc {
+	font-size: 2rem;
+	line-height: 1.8;
+}
+.story-tell-number {
+	font-size: 8.6rem;
+	font-weight: 600;
+	margin-bottom: 5.2rem;
+	color: $color-primary-dark;
+}
+
+@media (max-width: $size-md) {
+	.story-tell-img--alt {
+		grid-row: 4;
+	}
+}

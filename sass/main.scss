@@ -1,0 +1,23 @@
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './layout/header';
+@import './layout/navigation';
+@import './layout/hero';
+@import './layout/section-about-me';
+@import './layout/section-offers';
+@import './layout/section-training';
+@import './layout/section-contact';
+@import './layout/footer';
+
+@import './pages/home';
+
+@import './components/buttons';
+@import './components/slider';
+@import './components/steps-slider';
