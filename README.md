@@ -17,23 +17,23 @@ Some sections or features may be added, improved or changed in upcoming updates.
 - ✅ Service overview and training offer
 - ✅ “About Me” section introducing the trainer
 - ✅ **Slider** with motivational messages or key info  
-  *(including mobile swipe support using external library)*
+  _(including mobile swipe support using external library)_
 - ✅ Clean and responsive design (mobile & desktop ready)
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – semantic structure  
-- **SCSS / CSS3** – styling, layout, animations  
-- **JavaScript** – slider logic, navigation, interaction  
+- **HTML5** – semantic structure
+- **SCSS / CSS3** – styling, layout, animations
+- **JavaScript** – slider logic, navigation, interaction
 - **[swiped-events](https://github.com/john-doherty/swiped-events)** – external library to support swipe gestures on mobile devices
 
 ---
 
 ## 🌐 Live Preview
 
-👉 [https://pawel1022.github.io/TrenerPersonalny/](https://pawel1022.github.io/TrenerPersonalny/)
+👉 [https://pawel1022.github.io/trenerwebsite/](https://pawel1022.github.io/trenerwebsite/)
 
 ---
 
