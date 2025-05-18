@@ -10,8 +10,8 @@
 	align-items: center;
 	text-decoration: none;
 	font-size: 2rem;
-	font-weight: 500;
-	color: $color-primary;
+	font-weight: 600;
+	color: $text-color-dark;
 	cursor: pointer;
 	transition: color 0.3s;
 }
@@ -22,6 +22,7 @@
 }
 
 .social-icon {
-	font-size: 3rem;
+	font-size: 3.2rem;
 	margin-bottom: 1.6rem;
+	color: $color-primary;
 }
