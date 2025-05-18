@@ -82,3 +82,16 @@
 		}
 	}
 }
+
+@media (max-width: $size-sm) {
+	.steps {
+		height: 250px;
+		&__content {
+			margin-bottom: 1.6rem;
+			p {
+				height: 4.5rem;
+				min-height: 4.5rem;
+			}
+		}
+	}
+}
