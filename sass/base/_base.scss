@@ -19,6 +19,11 @@ body {
 	position: relative;
 }
 
+body.nav-open {
+	overflow: hidden;
+	height: 100vh;
+}
+
 @media (max-width: $size-lg) {
 	html {
 		font-size: 56.52%;
@@ -31,9 +36,8 @@ body {
 	}
 }
 
-
-@media (max-width: $size-xs){
-	html{
+@media (max-width: $size-xs) {
+	html {
 		font-size: 45%;
 	}
 }

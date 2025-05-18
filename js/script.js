@@ -3,15 +3,29 @@ function dynamicYear() {
 	const year = new Date().getFullYear()
 	yearEl.textContent = year
 }
-
 dynamicYear()
 
 const btnNav = document.querySelector('.btn-mobile-nav')
 const header = document.querySelector('.header')
 const allLinks = document.querySelectorAll('a:link')
+const navLinks = document.querySelectorAll('.main-nav-link')
 
 btnNav.addEventListener('click', function () {
-	header.classList.toggle('nav-open')
+	const navOpen = header.classList.toggle('nav-open')
+	document.body.classList.toggle('nav-open', navOpen)
+
+	if (navOpen) {
+		navLinks.forEach((link, index) => {
+			link.classList.remove('nav-link-animate-in') // Reset
+			setTimeout(() => {
+				link.classList.add('nav-link-animate-in')
+			}, index * 100)
+		})
+	} else {
+		navLinks.forEach(link => {
+			link.classList.remove('nav-link-animate-in')
+		})
+	}
 })
 
 allLinks.forEach(function (link) {
@@ -20,38 +34,31 @@ allLinks.forEach(function (link) {
 
 		if (href.startsWith('#')) {
 			e.preventDefault()
-			link.classList.toggle('animated')
 
 			if (href === '#') {
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth',
-				})
+				window.scrollTo({ top: 0, behavior: 'smooth' })
 			} else {
 				const sectionEl = document.querySelector(href)
-				if (sectionEl) {
-					sectionEl.scrollIntoView({ behavior: 'smooth' })
-				}
+				if (sectionEl) sectionEl.scrollIntoView({ behavior: 'smooth' })
 			}
 		}
 	})
 })
 
-document.querySelectorAll('.main-nav-link').forEach(function (link) {
+navLinks.forEach(function (link) {
 	link.addEventListener('click', function () {
 		header.classList.remove('nav-open')
+		document.body.classList.remove('nav-open')
+		navLinks.forEach(link => link.classList.remove('nav-link-animate-in'))
 	})
 })
-
-// Sticky navigation
 
 const sectionHeroEl = document.querySelector('.section-hero')
 
 const observer = new IntersectionObserver(
 	function (entries) {
 		const ent = entries[0]
-		if (!ent.isIntersecting) document.querySelector('body').classList.add('sticky')
-		else document.querySelector('body').classList.remove('sticky')
+		document.body.classList.toggle('sticky', !ent.isIntersecting)
 	},
 	{
 		root: null,
@@ -59,9 +66,8 @@ const observer = new IntersectionObserver(
 		rootMargin: '-80px',
 	}
 )
-
 observer.observe(sectionHeroEl)
-// slider steps methods
+
 const steps = [...document.querySelectorAll('.steps__content')]
 const stepsContainer = document.querySelector('#steps-container')
 const stepsNumbers = [...document.querySelectorAll('.steps__number')]
@@ -75,7 +81,6 @@ const stepsEl = function () {
 	const moveStep = stepIndex => {
 		steps.forEach(step => step.classList.remove('active'))
 		stepsNumbers.forEach(num => num.classList.remove('active'))
-
 		steps[stepIndex].classList.add('active')
 		stepsNumbers[stepIndex].classList.add('active')
 		curSlide = stepIndex
@@ -86,9 +91,7 @@ const stepsEl = function () {
 	stepsContainer.addEventListener('click', e => {
 		const clicked = e.target.closest('[data-index]')
 		if (!clicked) return
-
-		const stepIndex = +clicked.dataset.index - 1
-		moveStep(stepIndex)
+		moveStep(+clicked.dataset.index - 1)
 	})
 
 	const nextStep = () => {
@@ -104,10 +107,7 @@ const stepsEl = function () {
 	stepsBtnRight.addEventListener('click', nextStep)
 	stepsBtnLeft.addEventListener('click', prevStep)
 }
-
 stepsEl()
-
-// slider clients
 
 const slides = [...document.querySelectorAll('.slider__slide')]
 const slider = document.querySelector('.slider')
@@ -154,7 +154,6 @@ const sliderEl = function () {
 		autoSlideInterval = setInterval(nextSlide, 5000)
 	}
 
-	// EVENTS
 	sliderBtnRight.addEventListener('click', () => {
 		nextSlide()
 		resetInterval()
@@ -192,10 +191,8 @@ const sliderEl = function () {
 	const init = () => {
 		createDots()
 		moveSlide(0)
-		autoSlideInterval = setInterval(nextSlide, 14 * 1000)
+		autoSlideInterval = setInterval(nextSlide, 14000)
 	}
-
 	init()
 }
-
 sliderEl()

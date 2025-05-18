@@ -78,7 +78,15 @@
 
 	.main-nav-link:link,
 	.main-nav-link:visited {
-		transform: translate(0);
+		opacity: 0;
+		transform: translateX(50px);
+		transition: opacity 0.5s ease, transform 0.5s ease;
+	}
+
+	.nav-link-animate-in:link,
+	.nav-link-animate-in:visited {
+		opacity: 1;
+		transform: translateX(0);
 	}
 
 	.nav-open .main-nav {
