@@ -581,6 +581,36 @@ body.nav-open {
   color: #ff922b;
 }
 
+.map-container {
+  margin-top: 3.2rem;
+}
+
+.map-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ff922b;
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+
+.map-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  flex-direction: column;
+}
+
+.map-description {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+@media (max-width: 550px) {
+  iframe {
+    width: 80%;
+  }
+}
 .footer {
   padding: 1.6rem 0;
   background-color: #ff922b;
